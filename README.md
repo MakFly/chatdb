@@ -54,7 +54,7 @@ cd ../..
 bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) for the web app and [http://localhost:3001](http://localhost:3001) for the API.
+Open [https://chatdb.pulseview.app](https://chatdb.pulseview.app) for the web app and [http://localhost:3001](http://localhost:3001) for the API.
 
 ### Docker
 
