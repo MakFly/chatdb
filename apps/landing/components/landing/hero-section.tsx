@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { Github, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -46,11 +45,6 @@ export function HeroSection() {
 
         {/* CTAs */}
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
-          <Button asChild size="lg" className="bg-manga-pink text-background font-black uppercase tracking-wider text-base border-3 border-foreground hover:bg-manga-yellow hover:text-background shadow-[4px_4px_0px_var(--foreground)] hover:shadow-[6px_6px_0px_var(--foreground)] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5">
-            <Link href="/register">
-              ▶ {t("cta")}
-            </Link>
-          </Button>
           <Button asChild variant="outline" size="lg" className="font-black uppercase tracking-wider text-base border-3 border-foreground text-foreground hover:bg-foreground hover:text-background shadow-[4px_4px_0px_var(--manga-cyan)] hover:shadow-[6px_6px_0px_var(--manga-cyan)] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5">
             <a href="https://github.com/MakFly/chatdb" target="_blank" rel="noopener noreferrer">
               <Github />

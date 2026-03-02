@@ -6,4 +6,7 @@ export default withNextIntl({
   images: {
     unoptimized: true,
   },
+  experimental: {
+    turbopackUseSystemTlsCerts: true,
+  },
 });
