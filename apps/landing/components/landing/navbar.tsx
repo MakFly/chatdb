@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Bot } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 
 export function Navbar() {
@@ -38,11 +37,6 @@ export function Navbar() {
 
         <div className="flex items-center gap-3">
           <LocaleSwitcher variant="icon" />
-          <Button asChild size="sm" className="bg-manga-pink text-background font-black uppercase tracking-wider border-2 border-foreground hover:bg-manga-yellow hover:text-background transition-all">
-            <Link href="/login">
-              {t("login")}
-            </Link>
-          </Button>
         </div>
       </div>
     </header>
