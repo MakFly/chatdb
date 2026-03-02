@@ -3,7 +3,20 @@
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { locales, type Locale } from "@chat-assistant/shared/i18n/config";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { Globe } from "lucide-react";
+
+const LOCALE_LABELS: Record<Locale, string> = {
+  fr: "Francais",
+  en: "English",
+  ja: "日本語",
+};
 
 const LOCALE_FLAGS: Record<Locale, string> = {
   fr: "🇫🇷",
@@ -11,7 +24,7 @@ const LOCALE_FLAGS: Record<Locale, string> = {
   ja: "🇯🇵",
 };
 
-export function LocaleSwitcher() {
+export function LocaleSwitcher({ variant = "icon" }: { variant?: "icon" | "full" }) {
   const locale = useLocale() as Locale;
   const router = useRouter();
   const pathname = usePathname();
@@ -21,18 +34,31 @@ export function LocaleSwitcher() {
   }
 
   return (
-    <div className="flex items-center gap-1">
-      {locales.map((l) => (
-        <Button
-          key={l}
-          variant="ghost"
-          size="sm"
-          className={`px-2 text-sm ${l === locale ? "bg-accent" : "opacity-60 hover:opacity-100"}`}
-          onClick={() => switchLocale(l)}
-        >
-          {LOCALE_FLAGS[l]}
-        </Button>
-      ))}
-    </div>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        {variant === "icon" ? (
+          <Button variant="ghost" size="icon" className="size-8">
+            <Globe className="size-4" />
+          </Button>
+        ) : (
+          <Button variant="ghost" size="sm" className="gap-1.5 text-xs">
+            <span>{LOCALE_FLAGS[locale]}</span>
+            <span>{LOCALE_LABELS[locale]}</span>
+          </Button>
+        )}
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        {locales.map((l) => (
+          <DropdownMenuItem
+            key={l}
+            onClick={() => switchLocale(l)}
+            className={l === locale ? "bg-accent" : ""}
+          >
+            <span className="mr-2">{LOCALE_FLAGS[l]}</span>
+            {LOCALE_LABELS[l]}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

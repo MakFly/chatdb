@@ -1,17 +1,17 @@
-import { Check, X, Skull } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Check, X, Skull } from "lucide-react";
 
 export function ComparisonSection() {
   const t = useTranslations("landing.comparison");
 
   const rows = [
-    { criteria: t("openSource"), chatdb: true, alternatives: false },
-    { criteria: t("selfHosted"), chatdb: true, alternatives: false },
-    { criteria: t("multiLlm"), chatdb: true, alternatives: false },
-    { criteria: t("multiDb"), chatdb: true, alternatives: false },
-    { criteria: t("rbac"), chatdb: true, alternatives: true },
-    { criteria: t("dataPrivacy"), chatdb: true, alternatives: false },
-  ];
+    { key: "openSource", chatdb: true, alternatives: false },
+    { key: "selfHosted", chatdb: true, alternatives: false },
+    { key: "multiLlm", chatdb: true, alternatives: false },
+    { key: "multiDb", chatdb: true, alternatives: false },
+    { key: "rbac", chatdb: true, alternatives: true },
+    { key: "dataPrivacy", chatdb: true, alternatives: false },
+  ] as const;
 
   return (
     <section id="comparatif" className="relative manga-screentone border-y-3 border-foreground px-6 py-28">
@@ -48,12 +48,12 @@ export function ComparisonSection() {
           {/* Data rows */}
           {rows.map((row, i) => (
             <div
-              key={row.criteria}
+              key={row.key}
               className={`grid grid-cols-3 ${i < rows.length - 1 ? 'border-b-2 border-foreground/20' : ''} hover:bg-manga-pink/5 transition-colors`}
             >
               <div className="p-4 font-bold text-sm border-r-2 border-foreground/20 flex items-center gap-2">
                 <span className="text-manga-yellow text-[10px] font-black">{String(i + 1).padStart(2, '0')}</span>
-                {row.criteria}
+                {t(row.key)}
               </div>
               <div className="p-4 flex justify-center items-center">
                 {row.chatdb ? (

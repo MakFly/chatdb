@@ -1,36 +1,12 @@
-import { UserPlus, PlugZap, MessageCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { UserPlus, PlugZap, MessageCircle } from "lucide-react";
+
+const stepIcons = [UserPlus, PlugZap, MessageCircle];
+const stepColors = ["manga-pink", "manga-yellow", "manga-cyan"] as const;
+const stepKeys = ["step1", "step2", "step3"] as const;
 
 export function HowItWorksSection() {
   const t = useTranslations("landing.howItWorks");
-
-  const steps = [
-    {
-      number: 1,
-      icon: UserPlus,
-      title: t("step1.jpTitle"),
-      subtitle: t("step1.subtitle"),
-      description: t("step1.description"),
-      color: "manga-pink",
-    },
-    {
-      number: 2,
-      icon: PlugZap,
-      title: t("step2.jpTitle"),
-      subtitle: t("step2.subtitle"),
-      description: t("step2.description"),
-      color: "manga-yellow",
-    },
-    {
-      number: 3,
-      icon: MessageCircle,
-      title: t("step3.jpTitle"),
-      subtitle: t("step3.subtitle"),
-      description: t("step3.description"),
-      color: "manga-cyan",
-    },
-  ];
-
   return (
     <section className="relative px-6 py-28">
       <div className="mx-auto max-w-6xl">
@@ -48,38 +24,40 @@ export function HowItWorksSection() {
 
         {/* Steps as manga panels */}
         <div className="grid gap-6 sm:grid-cols-3">
-          {steps.map((step) => {
-            const Icon = step.icon;
+          {stepKeys.map((stepKey, i) => {
+            const Icon = stepIcons[i];
+            const color = stepColors[i];
+            const number = i + 1;
             return (
-              <div key={step.number} className="relative">
+              <div key={stepKey} className="relative">
                 {/* Step number — big background */}
                 <span
-                  className={`absolute -top-8 -left-2 text-[120px] font-black leading-none text-${step.color}/8 select-none`}
+                  className={`absolute -top-8 -left-2 text-[120px] font-black leading-none text-${color}/8 select-none`}
                   style={{ fontFamily: "'Black Ops One', cursive" }}
                 >
-                  {step.number}
+                  {number}
                 </span>
 
-                <div className={`relative manga-panel p-6 bg-card/60 border-3 border-foreground hover:shadow-[6px_6px_0px_var(--${step.color})] transition-all`}>
+                <div className={`relative manga-panel p-6 bg-card/60 border-3 border-foreground hover:shadow-[6px_6px_0px_var(--${color})] transition-all`}>
                   {/* Corner tag */}
-                  <div className={`absolute -top-3 left-4 bg-${step.color} text-background text-[10px] font-black uppercase tracking-widest px-3 py-1`}>
-                    Step {step.number}
+                  <div className={`absolute -top-3 left-4 bg-${color} text-background text-[10px] font-black uppercase tracking-widest px-3 py-1`}>
+                    Step {number}
                   </div>
 
                   <div className="mt-4 flex flex-col items-center text-center">
-                    <div className={`mb-4 flex size-14 items-center justify-center border-3 border-foreground bg-${step.color}/10`}>
-                      <Icon className={`size-7 text-${step.color}`} />
+                    <div className={`mb-4 flex size-14 items-center justify-center border-3 border-foreground bg-${color}/10`}>
+                      <Icon className={`size-7 text-${color}`} />
                     </div>
                     <p className="text-xs font-black text-muted-foreground/50 mb-1" style={{ fontFamily: "'Kosugi Maru', sans-serif" }}>
-                      {step.title}
+                      {t(`${stepKey}.jpTitle`)}
                     </p>
-                    <h3 className="text-base font-black uppercase tracking-wide mb-2">{step.subtitle}</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{step.description}</p>
+                    <h3 className="text-base font-black uppercase tracking-wide mb-2">{t(`${stepKey}.subtitle`)}</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{t(`${stepKey}.description`)}</p>
                   </div>
                 </div>
 
                 {/* Arrow connector (not on last) */}
-                {step.number < 3 && (
+                {number < 3 && (
                   <div className="hidden sm:flex absolute -right-5 top-1/2 -translate-y-1/2 z-20 text-manga-yellow font-black text-2xl">
                     →
                   </div>

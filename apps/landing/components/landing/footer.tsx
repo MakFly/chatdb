@@ -1,10 +1,8 @@
-import Link from "next/link";
-import { Bot, Github, Heart } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Bot, Github, Heart } from "lucide-react";
 
 export function Footer() {
   const t = useTranslations("landing.footer");
-
   return (
     <footer className="border-t-3 border-foreground px-6 py-10 bg-card/50">
       <div className="mx-auto max-w-6xl">
@@ -27,15 +25,15 @@ export function Footer() {
           <div>
             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-manga-yellow mb-4">{t("product")}</h4>
             <nav className="flex flex-col gap-2.5 text-sm">
-              <Link href="#fonctionnalites" className="text-muted-foreground hover:text-manga-pink transition-colors font-medium">
+              <a href="#fonctionnalites" className="text-muted-foreground hover:text-manga-pink transition-colors font-medium">
                 → {t("features")}
-              </Link>
-              <Link href="#comparatif" className="text-muted-foreground hover:text-manga-yellow transition-colors font-medium">
+              </a>
+              <a href="#comparatif" className="text-muted-foreground hover:text-manga-yellow transition-colors font-medium">
                 → {t("comparison")}
-              </Link>
-              <Link href="#oss" className="text-muted-foreground hover:text-manga-cyan transition-colors font-medium">
+              </a>
+              <a href="#oss" className="text-muted-foreground hover:text-manga-cyan transition-colors font-medium">
                 → {t("openSource")}
-              </Link>
+              </a>
             </nav>
           </div>
 
@@ -43,21 +41,21 @@ export function Footer() {
           <div>
             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-manga-cyan mb-4">{t("community")}</h4>
             <nav className="flex flex-col gap-2.5 text-sm">
-              <Link
+              <a
                 href="https://github.com/MakFly/chatdb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-manga-pink transition-colors font-medium flex items-center gap-2"
               >
                 <Github className="size-3.5" />
-                GitHub
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-manga-yellow transition-colors font-medium">
+                {t("documentation")}
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-manga-yellow transition-colors font-medium">
                 → {t("documentation")}
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-manga-cyan transition-colors font-medium">
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-manga-cyan transition-colors font-medium">
                 → {t("contact")}
-              </Link>
+              </a>
             </nav>
           </div>
         </div>

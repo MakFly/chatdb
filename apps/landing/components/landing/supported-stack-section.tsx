@@ -1,12 +1,11 @@
-import { Database, Cpu } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Database, Cpu } from "lucide-react";
 
 const databases = ["PostgreSQL", "MySQL", "SQLite", "MariaDB"];
 const llms = ["OpenAI", "Anthropic", "Ollama", "Mistral"];
 
 export function SupportedStackSection() {
   const t = useTranslations("landing.stack");
-
   return (
     <section className="relative manga-screentone border-y-3 border-foreground px-6 py-16 manga-jagged-top">
       <div className="relative z-10 mx-auto max-w-6xl">

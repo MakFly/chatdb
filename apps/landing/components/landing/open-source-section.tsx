@@ -1,11 +1,9 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Github, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTranslations } from "next-intl";
 
 export function OpenSourceSection() {
   const t = useTranslations("landing.openSourceSection");
-
   return (
     <section id="oss" className="relative manga-screentone border-y-3 border-foreground px-6 py-28 overflow-hidden">
       {/* Background kanji */}
@@ -26,7 +24,7 @@ export function OpenSourceSection() {
         </h2>
 
         <p className="text-muted-foreground mb-3 text-sm" style={{ fontFamily: "'Kosugi Maru', sans-serif" }}>
-          オープンソース — 自由ソフトウェア
+          {t("jpSubtitle")}
         </p>
 
         <p className="text-muted-foreground mb-10 flex items-center justify-center gap-2">
@@ -35,14 +33,14 @@ export function OpenSourceSection() {
         </p>
 
         <Button asChild size="lg" className="bg-transparent border-3 border-manga-cyan text-manga-cyan font-black uppercase tracking-wider hover:bg-manga-cyan hover:text-background shadow-[4px_4px_0px_var(--manga-pink)] hover:shadow-[6px_6px_0px_var(--manga-pink)] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5">
-          <Link
+          <a
             href="https://github.com/MakFly/chatdb"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Github className="size-5" />
             {t("cta")}
-          </Link>
+          </a>
         </Button>
       </div>
     </section>

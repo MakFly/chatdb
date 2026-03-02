@@ -9,12 +9,16 @@ import { OpenSourceSection } from "@/components/landing/open-source-section";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Footer } from "@/components/landing/footer";
 
-export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   return (
-    <main>
+    <main className="manga-halftone">
       <Navbar />
       <HeroSection />
       <SupportedStackSection />
