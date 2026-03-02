@@ -1,0 +1,11 @@
+{
+  "name": "chat-assistant",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "bun run --filter '*' dev",
+    "dev:web": "bun run --filter @chat-assistant/web dev",
+    "dev:api": "bun run --filter @chat-assistant/api dev",
+    "lint": "bun run --filter '*' lint"
+  }
+}

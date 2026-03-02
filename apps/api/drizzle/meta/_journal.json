@@ -1,0 +1,55 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1772321628155,
+      "tag": "0000_icy_eternity",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1772326246469,
+      "tag": "0001_tearful_sway",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1772400000000,
+      "tag": "0002_add_user_to_memorized_queries",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1772374366498,
+      "tag": "0003_yielding_speedball",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1772391538308,
+      "tag": "0004_dashing_ben_urich",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1772406409315,
+      "tag": "0005_sturdy_preak",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1772411986827,
+      "tag": "0006_solid_colossus",
+      "breakpoints": true
+    }
+  ]
+}
