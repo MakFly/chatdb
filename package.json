@@ -8,5 +8,8 @@
     "dev:api": "bun run --filter @chat-assistant/api dev",
     "build": "bun run --filter '*' build",
     "lint": "bun run --filter '*' lint"
+  },
+  "dependencies": {
+    "geist": "^1.7.0"
   }
 }
