@@ -1,45 +1,47 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { LocaleSwitcher } from "@/components/locale-switcher";
 
 export function Navbar() {
+  const t = useTranslations("landing.navbar");
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full border-b-3 border-foreground bg-background/95 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2 font-semibold text-lg">
-          <Bot className="size-6" />
-          ChatDB
+        <Link href="/" className="flex items-center gap-2 font-black text-xl tracking-tighter" style={{ fontFamily: "'Black Ops One', cursive" }}>
+          <Bot className="size-7 text-manga-pink" />
+          <span className="text-foreground">CHAT</span>
+          <span className="text-manga-pink">DB</span>
         </Link>
 
-        <nav className="hidden items-center gap-6 text-sm md:flex">
-          <Link
+        <nav className="hidden items-center gap-6 text-sm font-bold uppercase tracking-widest md:flex">
+          <a
             href="#fonctionnalites"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="text-muted-foreground transition-colors hover:text-manga-pink border-b-2 border-transparent hover:border-manga-pink pb-0.5"
           >
-            Fonctionnalités
-          </Link>
-          <Link
+            {t("features")}
+          </a>
+          <a
             href="#comparatif"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="text-muted-foreground transition-colors hover:text-manga-yellow border-b-2 border-transparent hover:border-manga-yellow pb-0.5"
           >
-            Comparatif
-          </Link>
+            {t("comparison")}
+          </a>
+          <a
+            href="#oss"
+            className="text-muted-foreground transition-colors hover:text-manga-cyan border-b-2 border-transparent hover:border-manga-cyan pb-0.5"
+          >
+            {t("openSource")}
+          </a>
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link
-            href="https://github.com/YOUR_USERNAME/chatdb"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://img.shields.io/github/stars/YOUR_USERNAME/chatdb?style=social"
-              alt="GitHub Stars"
-            />
-          </Link>
-          <Button asChild size="sm">
-            <Link href="/login">Se connecter</Link>
+          <LocaleSwitcher variant="icon" />
+          <Button asChild size="sm" className="bg-manga-pink text-background font-black uppercase tracking-wider border-2 border-foreground hover:bg-manga-yellow hover:text-background transition-all">
+            <Link href="/login">
+              {t("login")}
+            </Link>
           </Button>
         </div>
       </div>

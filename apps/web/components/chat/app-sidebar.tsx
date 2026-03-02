@@ -1,7 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { useRouter, usePathname } from "@/i18n/navigation";
 import {
   Bot,
   MessageSquare,
@@ -53,17 +54,19 @@ import { useSession, signOut } from "@/lib/auth-client";
 import { onConversationCreated } from "@/lib/events";
 import { Spinner } from "@/components/ui/spinner";
 import type { Conversation } from "@/lib/chat-types";
-
-const NAV_ITEMS = [
-  { id: "bookmarks", title: "Bookmarks", icon: Bookmark },
-  { id: "archive", title: "Archive", icon: Archive },
-  { id: "folders", title: "Folders", icon: FolderOpen },
-];
+import { LocaleSwitcher } from "@/components/locale-switcher";
 
 export function AppSidebar() {
+  const t = useTranslations("chat.sidebar");
   const router = useRouter();
   const pathname = usePathname();
   const { state } = useSidebar();
+
+  const NAV_ITEMS = [
+    { id: "bookmarks", title: t("bookmarks"), icon: Bookmark },
+    { id: "archive", title: t("archive"), icon: Archive },
+    { id: "folders", title: t("folders"), icon: FolderOpen },
+  ];
   const { data: session } = useSession();
   const [conversations, setConversations] = React.useState<Conversation[]>([]);
   const [searchQuery, setSearchQuery] = React.useState("");
@@ -160,7 +163,8 @@ export function AppSidebar() {
 
   const handleSignOut = async () => {
     await signOut();
-    router.push("/login");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    router.push("/login" as any);
   };
 
   // Filter out archived conversations for main list
@@ -183,15 +187,23 @@ export function AppSidebar() {
   }, [conversations]);
 
   const DATE_GROUP_ORDER = [
-    "Aujourd'hui",
-    "Hier",
-    "7 derniers jours",
-    "30 derniers jours",
-    "Plus ancien",
+    "today",
+    "yesterday",
+    "last7Days",
+    "last30Days",
+    "older",
   ] as const;
 
+  const DATE_GROUP_LABELS: Record<(typeof DATE_GROUP_ORDER)[number], string> = {
+    today: t("dateToday"),
+    yesterday: t("dateYesterday"),
+    last7Days: t("dateLast7Days"),
+    last30Days: t("dateLast30Days"),
+    older: t("dateOlder"),
+  };
+
   function getDateGroup(updatedAt: string | undefined): (typeof DATE_GROUP_ORDER)[number] {
-    if (!updatedAt) return "Plus ancien";
+    if (!updatedAt) return "older";
     const d = new Date(updatedAt);
     const now = new Date();
     const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -202,11 +214,11 @@ export function AppSidebar() {
     const monthAgo = new Date(todayStart);
     monthAgo.setDate(monthAgo.getDate() - 30);
 
-    if (d >= todayStart) return "Aujourd'hui";
-    if (d >= yesterdayStart) return "Hier";
-    if (d >= weekAgo) return "7 derniers jours";
-    if (d >= monthAgo) return "30 derniers jours";
-    return "Plus ancien";
+    if (d >= todayStart) return "today";
+    if (d >= yesterdayStart) return "yesterday";
+    if (d >= weekAgo) return "last7Days";
+    if (d >= monthAgo) return "last30Days";
+    return "older";
   }
 
   const groupedConversations = React.useMemo(() => {
@@ -262,11 +274,11 @@ export function AppSidebar() {
             <DropdownMenuContent side="right" align="start">
               <DropdownMenuItem onClick={() => handleBookmarkConversation(conversation.id)}>
                 <Bookmark className="mr-2 size-4" />
-                {conversation.starred ? "Remove bookmark" : "Bookmark"}
+                {conversation.starred ? t("removeBookmark") : t("bookmark")}
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => handleArchiveConversation(conversation.id)}>
                 <Archive className="mr-2 size-4" />
-                {conversation.archived ? "Unarchive" : "Archive"}
+                {conversation.archived ? t("unarchive") : t("archive")}
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem
@@ -274,7 +286,7 @@ export function AppSidebar() {
                 onClick={() => handleDeleteConversation(conversation.id)}
               >
                 <Trash2 className="mr-2 size-4" />
-                Delete
+                {t("delete")}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -294,7 +306,7 @@ export function AppSidebar() {
                   <Bot className="size-4" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-semibold">AI Assistant</span>
+                  <span className="truncate font-semibold">{t("aiAssistant")}</span>
                 </div>
               </a>
             </SidebarMenuButton>
@@ -307,9 +319,9 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton onClick={handleNewChat} tooltip="New Chat">
+                <SidebarMenuButton onClick={handleNewChat} tooltip={t("newChat")}>
                   <Plus className="size-4" />
-                  <span>New Chat</span>
+                  <span>{t("newChat")}</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -318,7 +330,7 @@ export function AppSidebar() {
                 <div className="relative">
                   <Search className="absolute left-2 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                   <SidebarInput
-                    placeholder="Search conversations..."
+                    placeholder={t("searchPlaceholder")}
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="pl-8"
@@ -334,7 +346,7 @@ export function AppSidebar() {
             <SidebarGroupLabel asChild>
               <CollapsibleTrigger className="flex w-full items-center">
                 <MessageSquare className="mr-2 size-4" />
-                Chats
+                {t("chats")}
                 <ChevronRight className="ml-auto size-4 transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
               </CollapsibleTrigger>
             </SidebarGroupLabel>
@@ -347,7 +359,7 @@ export function AppSidebar() {
                 ) : searchResults !== null ? (
                   searchResults.length === 0 ? (
                     <div className="px-2 py-4 text-xs text-muted-foreground text-center">
-                      No results found
+                      {t("noResults")}
                     </div>
                   ) : (
                     renderConversationList(searchResults.filter((c) => !c.archived))
@@ -357,7 +369,7 @@ export function AppSidebar() {
                     <div key={date}>
                       {!isCollapsed && (
                         <div className="px-2 py-2 text-xs font-medium text-muted-foreground">
-                          {date}
+                          {DATE_GROUP_LABELS[date]}
                         </div>
                       )}
                       {renderConversationList(groupedConversations[date])}
@@ -421,27 +433,32 @@ export function AppSidebar() {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
-              tooltip="Docs Mémoire"
+              tooltip={t("docsMemory")}
               onClick={() => router.push("/docs/memory")}
             >
               <BookOpen className="size-4" />
-              <span>Docs Mémoire</span>
+              <span>{t("docsMemory")}</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem>
             <SidebarMenuButton
-              tooltip="Guide Embeddings"
+              tooltip={t("guideEmbeddings")}
               onClick={() => router.push("/help/memory")}
             >
               <HelpCircle className="size-4" />
-              <span>Guide Embeddings</span>
+              <span>{t("guideEmbeddings")}</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SidebarMenuButton tooltip="Settings" onClick={() => router.push("/settings")}>
+            <SidebarMenuButton tooltip={t("settings")} onClick={() => router.push("/settings")}>
               <Settings className="size-4" />
-              <span>Settings</span>
+              <span>{t("settings")}</span>
             </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <div className="flex items-center px-2 py-1">
+              <LocaleSwitcher variant={isCollapsed ? "icon" : "full"} />
+            </div>
           </SidebarMenuItem>
           <SidebarMenuItem>
             <DropdownMenu>
@@ -465,11 +482,11 @@ export function AppSidebar() {
                 align="start"
                 className="w-[--radix-dropdown-menu-trigger-width] min-w-56"
               >
-                <DropdownMenuItem>Account Settings</DropdownMenuItem>
+                <DropdownMenuItem>{t("accountSettings")}</DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem className="text-destructive" onClick={handleSignOut}>
                   <LogOut className="mr-2 size-4" />
-                  Sign out
+                  {t("signOut")}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

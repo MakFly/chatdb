@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -48,6 +49,8 @@ export function Composer({
   connectionId,
   onPromptSelect,
 }: ComposerProps) {
+  const t = useTranslations("chat.composer");
+  const tCommon = useTranslations("common");
   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
 
   React.useEffect(() => {
@@ -93,7 +96,7 @@ export function Composer({
     if (!feedbackState) return;
     if (feedbackState === "success") toast.success(feedbackMessage);
     else if (feedbackState === "error") toast.error(feedbackMessage);
-    else if (feedbackState === "cancelled") toast(feedbackMessage ?? "Mutation annulée");
+    else if (feedbackState === "cancelled") toast(feedbackMessage ?? t("mutationCancelled"));
     const timer = setTimeout(() => setFeedback(null), 3000);
     return () => clearTimeout(timer);
   }, [feedbackState, feedbackMessage, setFeedback]);
@@ -144,7 +147,7 @@ export function Composer({
                 {pendingMutation.mutationType}
               </span>
               {" — "}
-              {pendingMutation.previewCount} ligne(s) affectée(s)
+              {t("rowsAffected", { count: pendingMutation.previewCount })}
             </span>
             <Button
               size="sm"
@@ -153,7 +156,7 @@ export function Composer({
               onClick={pendingMutation.onConfirm}
             >
               <CheckCircle2 className="size-3.5" />
-              Confirmer
+              {tCommon("confirm")}
             </Button>
             <Button
               size="sm"
@@ -162,7 +165,7 @@ export function Composer({
               onClick={pendingMutation.onCancel}
             >
               <XCircle className="size-3.5" />
-              Annuler
+              {tCommon("cancel")}
             </Button>
           </div>
         )}
@@ -189,11 +192,7 @@ export function Composer({
                   onClick={() => {
                     const next = { ...writeMode, update: !writeMode.update };
                     onWriteModeChange(next);
-                    toast(
-                      next.update
-                        ? "Mode UPDATE activé — les mutations nécessiteront une confirmation"
-                        : "Mode UPDATE désactivé",
-                    );
+                    toast(next.update ? t("updateEnabled") : t("updateDisabled"));
                   }}
                   aria-pressed={writeMode.update}
                   aria-label="Activer UPDATE"
@@ -211,11 +210,7 @@ export function Composer({
                   onClick={() => {
                     const next = { ...writeMode, delete: !writeMode.delete };
                     onWriteModeChange(next);
-                    toast(
-                      next.delete
-                        ? "Mode DELETE activé — les suppressions nécessiteront une confirmation"
-                        : "Mode DELETE désactivé",
-                    );
+                    toast(next.delete ? t("deleteEnabled") : t("deleteDisabled"));
                   }}
                   aria-pressed={writeMode.delete}
                   aria-label="Activer DELETE"
@@ -235,17 +230,13 @@ export function Composer({
                       onClick={() => {
                         const next = trigger === "schema" ? undefined : "schema";
                         onTriggerChange(next);
-                        toast(
-                          next
-                            ? "Trigger Schéma DB activé — le prochain message affichera le schéma"
-                            : "Trigger Schéma DB désactivé",
-                        );
+                        toast(next ? t("schemaEnabled") : t("schemaDisabled"));
                       }}
                       aria-pressed={trigger === "schema"}
                       aria-label="Activer Schéma DB"
                     >
                       <Database className="size-3" />
-                      Schéma DB
+                      {t("schemaDb")}
                     </Badge>
                     <Badge
                       variant="outline"
@@ -257,17 +248,13 @@ export function Composer({
                       onClick={() => {
                         const next = trigger === "explain" ? undefined : "explain";
                         onTriggerChange(next);
-                        toast(
-                          next
-                            ? "Trigger Explain activé — le prochain message expliquera la requête"
-                            : "Trigger Explain désactivé",
-                        );
+                        toast(next ? t("explainEnabled") : t("explainDisabled"));
                       }}
                       aria-pressed={trigger === "explain"}
                       aria-label="Activer Explain"
                     >
                       <FileQuestion className="size-3" />
-                      Explain
+                      {t("explain")}
                     </Badge>
                   </>
                 )}
@@ -279,7 +266,7 @@ export function Composer({
               value={input}
               onChange={(e) => onInputChange(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Envoyer un message..."
+              placeholder={t("placeholder")}
               className={cn(
                 "aui-composer-input mb-1 max-h-32 min-h-14 w-full resize-none",
                 "bg-transparent px-4 pt-2 pb-3 text-sm outline-none",
@@ -288,7 +275,7 @@ export function Composer({
               rows={1}
               disabled={isLoading || disabled}
               autoFocus
-              aria-label="Saisie du message"
+              aria-label={t("messageInput")}
             />
 
             <div className="aui-composer-action-wrapper relative mx-2 mb-2 flex items-center justify-between">
@@ -299,7 +286,7 @@ export function Composer({
                     size="icon"
                     className="relative rounded-full size-8"
                     onClick={() => setShowWriteOptions((v) => !v)}
-                    aria-label="Options de mode écriture"
+                    aria-label={t("writeOptions")}
                   >
                     <Plus className="size-4" />
                     {anyOption && (
@@ -322,13 +309,13 @@ export function Composer({
                       size="icon"
                       className="aui-composer-cancel size-8 rounded-full"
                       onClick={onStop}
-                      aria-label="Arrêter la génération"
+                      aria-label={t("stop")}
                     >
                       <Square className="aui-composer-cancel-icon size-3 fill-current" />
                     </Button>
                   </TooltipTrigger>
                   <TooltipContent side="bottom">
-                    Arrêter la génération
+                    {t("stop")}
                   </TooltipContent>
                 </Tooltip>
               ) : (
@@ -344,12 +331,12 @@ export function Composer({
                       )}
                       disabled={!canSend}
                       onClick={onSubmit}
-                      aria-label="Envoyer le message"
+                      aria-label={t("send")}
                     >
                       <ArrowUp className="aui-composer-send-icon size-4" />
                     </Button>
                   </TooltipTrigger>
-                  <TooltipContent side="bottom">Envoyer</TooltipContent>
+                  <TooltipContent side="bottom">{t("send")}</TooltipContent>
                 </Tooltip>
               )}
             </div>

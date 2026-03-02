@@ -1,3 +1,0 @@
-:HL["/_next/static/chunks/246b72b8e496b9d1.css","style"]
-:HL["https://img.shields.io/github/stars/MakFly/chatdb?style=social","image"]
-0:{"buildId":"_uPloZNvPrOB6ktY6vcEF","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

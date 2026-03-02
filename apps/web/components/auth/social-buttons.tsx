@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
@@ -48,6 +49,7 @@ function GitHubIcon() {
 }
 
 function SocialButtons() {
+  const t = useTranslations("auth.social");
   return (
     <div className="flex flex-col gap-2">
       <Tooltip>
@@ -60,11 +62,11 @@ function SocialButtons() {
               disabled
             >
               <GoogleIcon />
-              Continuer avec Google
+              {t("google")}
             </Button>
           </span>
         </TooltipTrigger>
-        <TooltipContent>Bientôt disponible</TooltipContent>
+        <TooltipContent>{t("comingSoon")}</TooltipContent>
       </Tooltip>
 
       <Tooltip>
@@ -77,11 +79,11 @@ function SocialButtons() {
               disabled
             >
               <GitHubIcon />
-              Continuer avec GitHub
+              {t("github")}
             </Button>
           </span>
         </TooltipTrigger>
-        <TooltipContent>Bientôt disponible</TooltipContent>
+        <TooltipContent>{t("comingSoon")}</TooltipContent>
       </Tooltip>
     </div>
   );

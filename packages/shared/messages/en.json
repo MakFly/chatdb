@@ -1,0 +1,413 @@
+{
+  "landing": {
+    "hero": {
+      "jpSubtitle": "データベース・アシスタント",
+      "title1": "Talk to your",
+      "title2": "data-",
+      "title3": "bases",
+      "taglinePrefix": "Questions →",
+      "taglineSql": "SQL",
+      "taglineSuffix": "→ Results.",
+      "taglineInstant": "一瞬で。",
+      "subtitle": "Open-source. Self-hosted. Multi-database. Multi-LLM.",
+      "cta": "Get Started",
+      "github": "GitHub"
+    },
+    "navbar": {
+      "features": "Features",
+      "comparison": "VS",
+      "openSource": "Open Source",
+      "login": "Sign in",
+      "github": "GitHub"
+    },
+    "features": {
+      "chapterLabel": "Chapter 01",
+      "title": "Features",
+      "nlToSql": {
+        "jpTitle": "言語 → SQL",
+        "subtitle": "Natural Language → SQL",
+        "description": "Ask your questions in plain English, get optimized SQL queries."
+      },
+      "multiLlm": {
+        "jpTitle": "マルチLLM",
+        "subtitle": "Multi-LLM",
+        "description": "OpenAI, Anthropic, Ollama, Mistral — choose your model."
+      },
+      "multiDb": {
+        "jpTitle": "マルチDB",
+        "subtitle": "Multi-Database",
+        "description": "PostgreSQL, MySQL, SQLite, MariaDB — one interface for all."
+      },
+      "rbac": {
+        "jpTitle": "RBAC",
+        "subtitle": "Access Control",
+        "description": "Fine-grained control over who can access which data."
+      },
+      "safeMutations": {
+        "jpTitle": "確認",
+        "subtitle": "Safe Mutations",
+        "description": "Modify your data safely with built-in validation."
+      },
+      "streaming": {
+        "jpTitle": "ストリーム",
+        "subtitle": "Real-time Streaming",
+        "description": "Receive responses as they are generated."
+      },
+      "openSource": {
+        "jpTitle": "オープン",
+        "subtitle": "Open-Source",
+        "description": "Deploy on your infrastructure. Your data stays with you."
+      },
+      "audit": {
+        "jpTitle": "監査",
+        "subtitle": "Audit Log",
+        "description": "Full traceability of every executed query."
+      }
+    },
+    "comparison": {
+      "chapterLabel": "Chapter 02",
+      "title": "Why ChatDB?",
+      "criteria": "Criteria",
+      "score": "Score",
+      "openSource": "Open-source",
+      "selfHosted": "Self-hosted",
+      "multiLlm": "Multi-LLM",
+      "multiDb": "Multi-DB",
+      "rbac": "RBAC",
+      "dataPrivacy": "Your data stays yours",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "howItWorks": {
+      "chapterLabel": "Chapter 03",
+      "title": "How it works",
+      "step1": {
+        "jpTitle": "登録",
+        "subtitle": "Create an account",
+        "description": "Free registration in seconds."
+      },
+      "step2": {
+        "jpTitle": "接続",
+        "subtitle": "Connect your database",
+        "description": "PostgreSQL, MySQL, SQLite, MariaDB — add your connection."
+      },
+      "step3": {
+        "jpTitle": "質問",
+        "subtitle": "Ask your questions",
+        "description": "AI translates and executes your queries in real time."
+      }
+    },
+    "openSourceSection": {
+      "title1": "Built in ",
+      "title2": "open-source",
+      "jpSubtitle": "オープンソース — 自由ソフトウェア",
+      "description": "ChatDB is 100% open-source under MIT license.",
+      "cta": "View source code"
+    },
+    "cta": {
+      "chapterLabel": "最終章 — Final Chapter",
+      "title1": "Ready to ",
+      "title2": "query",
+      "title3": "your data",
+      "title4": "?",
+      "description": "Deploy ChatDB in minutes.",
+      "jpReady": "準備はいい？",
+      "start": "Get Started",
+      "documentation": "Documentation"
+    },
+    "footer": {
+      "description": "Query your databases in natural language.",
+      "jpDescription": "データベース・アシスタント",
+      "product": "Product",
+      "features": "Features",
+      "comparison": "Comparison",
+      "openSource": "Open Source",
+      "community": "Community",
+      "documentation": "Documentation",
+      "contact": "Contact",
+      "copyright": "© 2026 ChatDB — MIT License",
+      "builtWith": "Built with",
+      "and": "and"
+    },
+    "stack": {
+      "title": "互換性 — Compatibility",
+      "databases": "Databases",
+      "llmProviders": "LLM Providers"
+    }
+  },
+  "auth": {
+    "branding": {
+      "tagline": "Query your databases in natural language.",
+      "features": {
+        "sqlNatural": "Query your data with natural SQL",
+        "connectDbs": "Connect PostgreSQL, MySQL, SQLite",
+        "history": "History and sharing of your queries",
+        "security": "Security and privacy guaranteed"
+      },
+      "copyright": "© {year} ChatDB. All rights reserved."
+    },
+    "social": {
+      "google": "Continue with Google",
+      "github": "Continue with GitHub",
+      "comingSoon": "Coming soon"
+    },
+    "or": "or",
+    "login": {
+      "title": "Sign in",
+      "subtitle": "Access your ChatDB workspace",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign in",
+      "noAccount": "Don't have an account?",
+      "register": "Sign up",
+      "invalidCredentials": "Invalid credentials",
+      "genericError": "An error occurred"
+    },
+    "register": {
+      "title": "Create an account",
+      "subtitle": "Start querying your data",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "Min. 8 characters",
+      "submit": "Create my account",
+      "hasAccount": "Already have an account?",
+      "login": "Sign in",
+      "registrationFailed": "Registration failed",
+      "genericError": "An error occurred"
+    }
+  },
+  "chat": {
+    "sidebar": {
+      "aiAssistant": "AI Assistant",
+      "newChat": "New Chat",
+      "searchPlaceholder": "Search conversations...",
+      "chats": "Chats",
+      "noResults": "No results found",
+      "bookmarks": "Bookmarks",
+      "archive": "Archive",
+      "folders": "Folders",
+      "removeBookmark": "Remove bookmark",
+      "bookmark": "Bookmark",
+      "unarchive": "Unarchive",
+      "delete": "Delete",
+      "docsMemory": "Memory Docs",
+      "guideEmbeddings": "Embeddings Guide",
+      "settings": "Settings",
+      "accountSettings": "Account Settings",
+      "signOut": "Sign out",
+      "dateToday": "Today",
+      "dateYesterday": "Yesterday",
+      "dateLast7Days": "Last 7 days",
+      "dateLast30Days": "Last 30 days",
+      "dateOlder": "Older"
+    },
+    "header": {
+      "noConnection": "Offline",
+      "noConnectionSelect": "No connection"
+    },
+    "welcome": {
+      "title": "How can I help you?",
+      "subtitle": "Query your databases, explore schemas, analyze your data.",
+      "suggestion1": "Show me my database schema",
+      "suggestion2": "What are the top 10 products by revenue?",
+      "suggestion3": "Find users registered last week"
+    },
+    "scroll": {
+      "newMessages": "{count} new message{count, plural, one {} other {s}}",
+      "scrollDown": "Scroll to bottom"
+    },
+    "composer": {
+      "placeholder": "Send a message...",
+      "send": "Send",
+      "stop": "Stop generation",
+      "messageInput": "Message input",
+      "writeOptions": "Write mode options",
+      "mutationCancelled": "Mutation cancelled",
+      "rowsAffected": "{count} row(s) affected",
+      "updateEnabled": "UPDATE mode enabled — mutations will require confirmation",
+      "updateDisabled": "UPDATE mode disabled",
+      "deleteEnabled": "DELETE mode enabled — deletions will require confirmation",
+      "deleteDisabled": "DELETE mode disabled",
+      "schemaEnabled": "DB Schema trigger enabled — next message will show the schema",
+      "schemaDisabled": "DB Schema trigger disabled",
+      "explainEnabled": "Explain trigger enabled — next message will explain the query",
+      "explainDisabled": "Explain trigger disabled",
+      "schemaDb": "DB Schema",
+      "explain": "Explain"
+    },
+    "quickPrompts": {
+      "showSchema": "Show schema",
+      "showSchemaInput": "Show me the database schema",
+      "explainQuery": "Explain this query",
+      "explainQueryInput": "Explain how this query works",
+      "analyzeDb": "Analyze this database",
+      "analyzeDbInput": "Analyze the structure and performance of this database",
+      "mutationStats": "My mutation stats"
+    },
+    "help": {
+      "title": "ChatDB Help",
+      "whatCanDo": "What ChatDB can do",
+      "canQueryDbs": "Query databases",
+      "canExploreSchemas": "Explore schemas",
+      "canAnalyzeData": "Analyze data",
+      "canWriteSql": "Write SQL",
+      "exampleQuestions": "Example questions",
+      "example1": "Show me my database schema",
+      "example2": "What are the top 10 products by revenue?",
+      "example3": "Find users registered last week",
+      "shortcuts": "Shortcuts",
+      "shortcutSend": "Send",
+      "shortcutNewLine": "New line",
+      "shortcutStop": "Stop",
+      "limitations": "Limitations",
+      "limitSelectOnly": "SELECT only",
+      "limitMaxRows": "Maximum 500 rows",
+      "limitNoDdl": "No DDL (CREATE, ALTER, DROP)"
+    }
+  },
+  "settings": {
+    "stats": {
+      "activeProviders": "Active providers",
+      "configuredKeys": "Configured keys",
+      "available": "Available",
+      "pending": "Pending",
+      "activeConnections": "Active connections"
+    },
+    "tabs": {
+      "providers": "AI Providers",
+      "connections": "Connections",
+      "prompts": "Prompts",
+      "general": "General"
+    },
+    "providers": {
+      "title": "AI Providers",
+      "description": "Configure your API keys to enable different AI providers.",
+      "noProviders": "No providers configured.",
+      "active": "Active",
+      "inactive": "Inactive",
+      "apiKey": "API Key",
+      "configured": "Configured",
+      "notConfigured": "Not configured",
+      "edit": "Edit",
+      "save": "Save",
+      "saving": "Saving",
+      "saved": "Saved",
+      "cancel": "Cancel",
+      "enabled": "Provider enabled",
+      "disabled": "Provider disabled",
+      "keySaved": "API key saved",
+      "keySaveFailed": "Failed to save",
+      "updateFailed": "Update failed"
+    },
+    "connections": {
+      "title": "Database connections",
+      "description": "Manage your PostgreSQL connections to query your data via chat.",
+      "newConnection": "New connection",
+      "addConnection": "Add a connection",
+      "noConnections": "No connections configured.",
+      "active": "Active",
+      "inactive": "Inactive",
+      "test": "Test",
+      "edit": "Edit",
+      "testOk": "Connection OK",
+      "testResponds": "{name} responds correctly",
+      "testFailed": "Test failed",
+      "testImpossible": "Connection failed",
+      "activated": "Connection activated",
+      "deactivated": "Connection deactivated",
+      "deleted": "Connection deleted",
+      "deleteFailed": "Delete failed",
+      "deleteConfirm": "Delete connection \"{name}\"?",
+      "updateFailed": "Update failed",
+      "form": {
+        "editTitle": "Edit connection",
+        "newTitle": "New connection",
+        "editDescription": "Edit connection settings.",
+        "newDescription": "Configure a new PostgreSQL connection.",
+        "name": "Name",
+        "namePlaceholder": "Production DB",
+        "host": "Host",
+        "hostPlaceholder": "localhost",
+        "port": "Port",
+        "portPlaceholder": "5432",
+        "database": "Database",
+        "databasePlaceholder": "mydb",
+        "username": "Username",
+        "usernamePlaceholder": "postgres",
+        "password": "Password",
+        "passwordPlaceholder": "••••••",
+        "passwordUnchanged": "(unchanged)",
+        "ssl": "SSL",
+        "enableSsl": "Enable SSL",
+        "cancel": "Cancel",
+        "create": "Create",
+        "save": "Save",
+        "created": "Connection created",
+        "updated": "Connection updated",
+        "createFailed": "Creation failed",
+        "updateFailed": "Update failed"
+      }
+    },
+    "prompts": {
+      "title": "System Prompts",
+      "description": "Customize system prompts used by the assistant and agents.",
+      "categories": {
+        "general": "General",
+        "agent": "Agents",
+        "routing": "Routing",
+        "context": "Context"
+      },
+      "promptCount": "{count} prompt{count, plural, one {} other {s}}",
+      "modifiedOn": "Modified on {date}",
+      "contentLabel": "Prompt content",
+      "contentPlaceholder": "Prompt content...",
+      "charCount": "{count} / 10000 characters",
+      "charValidation": "Content must be between 50 and 10000 characters.",
+      "reset": "Reset",
+      "cancel": "Cancel",
+      "save": "Save",
+      "resetConfirm": "Reset prompt \"{name}\" to default?",
+      "updated": "Prompt updated",
+      "updateFailed": "Update failed",
+      "resetSuccess": "Prompt reset",
+      "resetFailed": "Reset failed"
+    },
+    "general": {
+      "title": "General settings",
+      "description": "Customize your user experience.",
+      "appearance": "Appearance",
+      "appearanceDescription": "Choose your preferred theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System",
+      "language": "Language",
+      "languageDescription": "Interface language",
+      "comingSoon": "Coming soon"
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "Page not found",
+      "back": "Back to home"
+    },
+    "generic": {
+      "title": "Something went wrong",
+      "retry": "Try again"
+    }
+  },
+  "common": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "send": "Send",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "error": "Error",
+    "unknownError": "Unknown error"
+  }
+}

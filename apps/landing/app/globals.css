@@ -1,82 +1,56 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dela+Gothic+One&family=Kosugi+Maru&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
+  --background: oklch(0.08 0.02 280);
+  --foreground: oklch(0.97 0.01 90);
+  --card: oklch(0.12 0.025 280);
+  --card-foreground: oklch(0.97 0.01 90);
+  --popover: oklch(0.12 0.02 280);
+  --popover-foreground: oklch(0.97 0.01 90);
+  --primary: oklch(0.75 0.25 350);
+  --primary-foreground: oklch(0.08 0 0);
+  --secondary: oklch(0.85 0.2 90);
+  --secondary-foreground: oklch(0.08 0 0);
+  --muted: oklch(0.18 0.02 280);
+  --muted-foreground: oklch(0.65 0.03 280);
+  --accent: oklch(0.7 0.2 250);
+  --accent-foreground: oklch(0.97 0 0);
+  --destructive: oklch(0.65 0.28 25);
+  --destructive-foreground: oklch(0.97 0 0);
+  --border: oklch(0.3 0.06 350);
+  --input: oklch(0.2 0.03 280);
+  --ring: oklch(0.75 0.25 350);
+  --chart-1: oklch(0.75 0.25 350);
+  --chart-2: oklch(0.85 0.2 90);
+  --chart-3: oklch(0.7 0.2 250);
+  --chart-4: oklch(0.65 0.28 25);
+  --chart-5: oklch(0.8 0.15 160);
+  --radius: 0px;
+  --sidebar: oklch(0.1 0 0);
+  --sidebar-foreground: oklch(0.97 0 0);
+  --sidebar-primary: oklch(0.75 0.25 350);
+  --sidebar-primary-foreground: oklch(0.08 0 0);
+  --sidebar-accent: oklch(0.18 0.02 280);
+  --sidebar-accent-foreground: oklch(0.97 0 0);
+  --sidebar-border: oklch(0.3 0.06 350);
+  --sidebar-ring: oklch(0.75 0.25 350);
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.269 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  /* Manga custom colors */
+  --manga-pink: oklch(0.75 0.25 350);
+  --manga-yellow: oklch(0.9 0.18 90);
+  --manga-cyan: oklch(0.78 0.15 220);
+  --manga-red: oklch(0.6 0.3 25);
+  --manga-purple: oklch(0.5 0.25 300);
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: 'Noto Sans JP', 'Geist', sans-serif;
+  --font-mono: 'Geist Mono', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -101,10 +75,10 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -113,6 +87,12 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-manga-pink: var(--manga-pink);
+  --color-manga-yellow: var(--manga-yellow);
+  --color-manga-cyan: var(--manga-cyan);
+  --color-manga-red: var(--manga-red);
+  --color-manga-purple: var(--manga-purple);
 }
 
 @layer base {
@@ -122,4 +102,246 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* ═══════════════════════════════════════════
+   MANGA RETRO EFFECTS
+   ═══════════════════════════════════════════ */
+
+/* Halftone dot pattern overlay */
+.manga-halftone {
+  position: relative;
+}
+.manga-halftone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--manga-pink) 0.5px, transparent 0.5px);
+  background-size: 8px 8px;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Speed lines radiating from center */
+.manga-speedlines {
+  position: relative;
+  overflow: hidden;
+}
+.manga-speedlines::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: repeating-conic-gradient(
+    transparent 0deg 1.5deg,
+    var(--manga-pink) 1.5deg 1.8deg,
+    transparent 1.8deg 4deg
+  );
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Horizontal speed lines */
+.manga-hlines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    var(--manga-pink) 3px,
+    var(--manga-pink) 3.5px,
+    transparent 3.5px,
+    transparent 18px
+  );
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Comic panel border */
+.manga-panel {
+  border: 3px solid var(--foreground);
+  box-shadow:
+    6px 6px 0px var(--manga-pink),
+    -2px -2px 0px var(--manga-cyan);
+  position: relative;
+}
+
+/* Screentone texture */
+.manga-screentone {
+  position: relative;
+}
+.manga-screentone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(45deg, var(--manga-purple) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--manga-purple) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--manga-purple) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--manga-purple) 75%);
+  background-size: 4px 4px;
+  background-position: 0 0, 0 2px, 2px -2px, -2px 0;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Diagonal slash accent */
+.manga-slash {
+  position: relative;
+}
+.manga-slash::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  background: var(--manga-yellow);
+  clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
+  z-index: 1;
+}
+
+/* Impact text shadow (manga action text) */
+.manga-impact {
+  text-shadow:
+    3px 3px 0px var(--manga-pink),
+    -1px -1px 0px var(--manga-cyan);
+}
+
+/* Neon glow */
+.manga-glow {
+  text-shadow:
+    0 0 10px var(--manga-pink),
+    0 0 30px var(--manga-pink),
+    0 0 60px color-mix(in oklch, var(--manga-pink), transparent 50%);
+}
+
+/* Onomatopoeia burst background */
+.manga-burst {
+  position: relative;
+}
+.manga-burst::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: conic-gradient(
+    from 0deg,
+    var(--manga-yellow) 0deg 10deg,
+    transparent 10deg 20deg,
+    var(--manga-yellow) 20deg 30deg,
+    transparent 30deg 40deg,
+    var(--manga-yellow) 40deg 50deg,
+    transparent 50deg 60deg,
+    var(--manga-yellow) 60deg 70deg,
+    transparent 70deg 80deg,
+    var(--manga-yellow) 80deg 90deg,
+    transparent 90deg 100deg,
+    var(--manga-yellow) 100deg 110deg,
+    transparent 110deg 120deg,
+    var(--manga-yellow) 120deg 130deg,
+    transparent 130deg 140deg,
+    var(--manga-yellow) 140deg 150deg,
+    transparent 150deg 160deg,
+    var(--manga-yellow) 160deg 170deg,
+    transparent 170deg 180deg,
+    var(--manga-yellow) 180deg 190deg,
+    transparent 190deg 200deg,
+    var(--manga-yellow) 200deg 210deg,
+    transparent 210deg 220deg,
+    var(--manga-yellow) 220deg 230deg,
+    transparent 230deg 240deg,
+    var(--manga-yellow) 240deg 250deg,
+    transparent 250deg 260deg,
+    var(--manga-yellow) 260deg 270deg,
+    transparent 270deg 280deg,
+    var(--manga-yellow) 280deg 290deg,
+    transparent 290deg 300deg,
+    var(--manga-yellow) 300deg 310deg,
+    transparent 310deg 320deg,
+    var(--manga-yellow) 320deg 330deg,
+    transparent 330deg 340deg,
+    var(--manga-yellow) 340deg 350deg,
+    transparent 350deg 360deg
+  );
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Stagger animations */
+@keyframes manga-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px) skewX(-2deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+  }
+}
+
+@keyframes manga-slam {
+  0% {
+    opacity: 0;
+    transform: scale(2.5) rotate(-5deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.9) rotate(1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes manga-flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes manga-diagonal-wipe {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.animate-manga-slide-up {
+  animation: manga-slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-manga-slam {
+  animation: manga-slam 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.animate-manga-flash {
+  animation: manga-flash 2s ease-in-out infinite;
+}
+
+.animate-manga-wipe {
+  animation: manga-diagonal-wipe 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Jagged edge divider */
+.manga-jagged-top {
+  clip-path: polygon(
+    0% 8%, 3% 0%, 6% 6%, 9% 1%, 12% 7%, 15% 0%, 18% 5%, 21% 1%, 24% 8%, 27% 0%, 30% 6%, 33% 2%, 36% 7%, 39% 0%, 42% 5%, 45% 1%, 48% 8%, 51% 0%, 54% 6%, 57% 1%, 60% 7%, 63% 0%, 66% 5%, 69% 2%, 72% 8%, 75% 0%, 78% 6%, 81% 1%, 84% 7%, 87% 0%, 90% 5%, 93% 2%, 96% 7%, 100% 0%, 100% 100%, 0% 100%
+  );
+}
+
+/* Selection color */
+::selection {
+  background: var(--manga-pink);
+  color: var(--background);
 }

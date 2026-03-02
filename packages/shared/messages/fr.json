@@ -1,0 +1,413 @@
+{
+  "landing": {
+    "hero": {
+      "jpSubtitle": "データベース・アシスタント",
+      "title1": "Parlez à vos",
+      "title2": "bases de",
+      "title3": "données",
+      "taglinePrefix": "Questions →",
+      "taglineSql": "SQL",
+      "taglineSuffix": "→ Résultats.",
+      "taglineInstant": "一瞬で。",
+      "subtitle": "Open-source. Self-hosted. Multi-bases. Multi-LLM.",
+      "cta": "Commencer",
+      "github": "GitHub"
+    },
+    "navbar": {
+      "features": "Features",
+      "comparison": "VS",
+      "openSource": "Open Source",
+      "login": "Se connecter",
+      "github": "GitHub"
+    },
+    "features": {
+      "chapterLabel": "Chapter 01",
+      "title": "Fonctionnalités",
+      "nlToSql": {
+        "jpTitle": "言語 → SQL",
+        "subtitle": "Langage naturel → SQL",
+        "description": "Posez vos questions en français, obtenez des requêtes SQL optimisées."
+      },
+      "multiLlm": {
+        "jpTitle": "マルチLLM",
+        "subtitle": "Multi-LLM",
+        "description": "OpenAI, Anthropic, Ollama, Mistral — choisissez votre modèle."
+      },
+      "multiDb": {
+        "jpTitle": "マルチDB",
+        "subtitle": "Multi-Bases",
+        "description": "PostgreSQL, MySQL, SQLite, MariaDB — une interface unique."
+      },
+      "rbac": {
+        "jpTitle": "RBAC",
+        "subtitle": "Contrôle d'accès",
+        "description": "Gérez finement qui peut accéder à quelles données."
+      },
+      "safeMutations": {
+        "jpTitle": "確認",
+        "subtitle": "Mutations sûres",
+        "description": "Modifiez vos données en toute sécurité avec validation."
+      },
+      "streaming": {
+        "jpTitle": "ストリーム",
+        "subtitle": "Streaming temps réel",
+        "description": "Recevez les réponses au fil de leur génération."
+      },
+      "openSource": {
+        "jpTitle": "オープン",
+        "subtitle": "Open-Source",
+        "description": "Déployez sur votre infra. Vos données restent chez vous."
+      },
+      "audit": {
+        "jpTitle": "監査",
+        "subtitle": "Journal d'audit",
+        "description": "Traçabilité complète de chaque requête exécutée."
+      }
+    },
+    "comparison": {
+      "chapterLabel": "Chapter 02",
+      "title": "Pourquoi ChatDB ?",
+      "criteria": "Critère",
+      "score": "Score",
+      "openSource": "Open-source",
+      "selfHosted": "Self-hosted",
+      "multiLlm": "Multi-LLM",
+      "multiDb": "Multi-DB",
+      "rbac": "RBAC",
+      "dataPrivacy": "Données chez vous",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "howItWorks": {
+      "chapterLabel": "Chapter 03",
+      "title": "Comment ça marche",
+      "step1": {
+        "jpTitle": "登録",
+        "subtitle": "Créez un compte",
+        "description": "Inscription gratuite en quelques secondes."
+      },
+      "step2": {
+        "jpTitle": "接続",
+        "subtitle": "Connectez votre base",
+        "description": "PostgreSQL, MySQL, SQLite, MariaDB — ajoutez votre connexion."
+      },
+      "step3": {
+        "jpTitle": "質問",
+        "subtitle": "Posez vos questions",
+        "description": "L'IA traduit et exécute vos requêtes en temps réel."
+      }
+    },
+    "openSourceSection": {
+      "title1": "Construit en ",
+      "title2": "open-source",
+      "jpSubtitle": "オープンソース — 自由ソフトウェア",
+      "description": "ChatDB est 100% open-source sous licence MIT.",
+      "cta": "Voir le code source"
+    },
+    "cta": {
+      "chapterLabel": "最終章 — Final Chapter",
+      "title1": "Prêt à ",
+      "title2": "interroger",
+      "title3": "vos données",
+      "title4": " ?",
+      "description": "Déployez ChatDB en quelques minutes.",
+      "jpReady": "準備はいい？",
+      "start": "Commencer",
+      "documentation": "Documentation"
+    },
+    "footer": {
+      "description": "Interrogez vos bases de données en langage naturel.",
+      "jpDescription": "データベース・アシスタント",
+      "product": "Produit",
+      "features": "Fonctionnalités",
+      "comparison": "Comparatif",
+      "openSource": "Open Source",
+      "community": "Communauté",
+      "documentation": "Documentation",
+      "contact": "Contact",
+      "copyright": "© 2026 ChatDB — MIT License",
+      "builtWith": "Built with",
+      "and": "and"
+    },
+    "stack": {
+      "title": "互換性 — Compatibilité",
+      "databases": "Databases",
+      "llmProviders": "LLM Providers"
+    }
+  },
+  "auth": {
+    "branding": {
+      "tagline": "Interrogez vos bases de données en langage naturel.",
+      "features": {
+        "sqlNatural": "Interrogez vos données en SQL naturel",
+        "connectDbs": "Connectez PostgreSQL, MySQL, SQLite",
+        "history": "Historique et partage de vos requêtes",
+        "security": "Sécurité et confidentialité garanties"
+      },
+      "copyright": "© {year} ChatDB. Tous droits réservés."
+    },
+    "social": {
+      "google": "Continuer avec Google",
+      "github": "Continuer avec GitHub",
+      "comingSoon": "Bientôt disponible"
+    },
+    "or": "ou",
+    "login": {
+      "title": "Connexion",
+      "subtitle": "Accédez à votre espace ChatDB",
+      "email": "Email",
+      "emailPlaceholder": "vous@exemple.com",
+      "password": "Mot de passe",
+      "forgotPassword": "Mot de passe oublié ?",
+      "submit": "Se connecter",
+      "noAccount": "Pas encore de compte ?",
+      "register": "S'inscrire",
+      "invalidCredentials": "Identifiants invalides",
+      "genericError": "Une erreur est survenue"
+    },
+    "register": {
+      "title": "Créer un compte",
+      "subtitle": "Commencez à interroger vos données",
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "vous@exemple.com",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Min. 8 caractères",
+      "submit": "Créer mon compte",
+      "hasAccount": "Déjà un compte ?",
+      "login": "Se connecter",
+      "registrationFailed": "Échec de l'inscription",
+      "genericError": "Une erreur est survenue"
+    }
+  },
+  "chat": {
+    "sidebar": {
+      "aiAssistant": "AI Assistant",
+      "newChat": "New Chat",
+      "searchPlaceholder": "Search conversations...",
+      "chats": "Chats",
+      "noResults": "No results found",
+      "bookmarks": "Bookmarks",
+      "archive": "Archive",
+      "folders": "Folders",
+      "removeBookmark": "Remove bookmark",
+      "bookmark": "Bookmark",
+      "unarchive": "Unarchive",
+      "delete": "Delete",
+      "docsMemory": "Docs Mémoire",
+      "guideEmbeddings": "Guide Embeddings",
+      "settings": "Settings",
+      "accountSettings": "Account Settings",
+      "signOut": "Sign out",
+      "dateToday": "Aujourd'hui",
+      "dateYesterday": "Hier",
+      "dateLast7Days": "7 derniers jours",
+      "dateLast30Days": "30 derniers jours",
+      "dateOlder": "Plus ancien"
+    },
+    "header": {
+      "noConnection": "Offline",
+      "noConnectionSelect": "Aucune connexion"
+    },
+    "welcome": {
+      "title": "Comment puis-je vous aider ?",
+      "subtitle": "Interrogez vos bases de données, explorez les schémas, analysez vos données.",
+      "suggestion1": "Montre-moi le schéma de ma base",
+      "suggestion2": "Quels sont les 10 meilleurs produits par revenu ?",
+      "suggestion3": "Trouve les utilisateurs inscrits la semaine dernière"
+    },
+    "scroll": {
+      "newMessages": "{count} nouveau{count, plural, one {} other {x}} message{count, plural, one {} other {s}}",
+      "scrollDown": "Défiler vers le bas"
+    },
+    "composer": {
+      "placeholder": "Envoyer un message...",
+      "send": "Envoyer",
+      "stop": "Arrêter la génération",
+      "messageInput": "Saisie du message",
+      "writeOptions": "Options de mode écriture",
+      "mutationCancelled": "Mutation annulée",
+      "rowsAffected": "{count} ligne(s) affectée(s)",
+      "updateEnabled": "Mode UPDATE activé — les mutations nécessiteront une confirmation",
+      "updateDisabled": "Mode UPDATE désactivé",
+      "deleteEnabled": "Mode DELETE activé — les suppressions nécessiteront une confirmation",
+      "deleteDisabled": "Mode DELETE désactivé",
+      "schemaEnabled": "Trigger Schéma DB activé — le prochain message affichera le schéma",
+      "schemaDisabled": "Trigger Schéma DB désactivé",
+      "explainEnabled": "Trigger Explain activé — le prochain message expliquera la requête",
+      "explainDisabled": "Trigger Explain désactivé",
+      "schemaDb": "Schéma DB",
+      "explain": "Explain"
+    },
+    "quickPrompts": {
+      "showSchema": "Montre le schéma",
+      "showSchemaInput": "Montre-moi le schéma de la base de données",
+      "explainQuery": "Explique cette requête",
+      "explainQueryInput": "Explique comment fonctionne cette requête",
+      "analyzeDb": "Analyse cette base",
+      "analyzeDbInput": "Analyse la structure et les performances de cette base de données",
+      "mutationStats": "Mes stats mutations"
+    },
+    "help": {
+      "title": "Aide ChatDB",
+      "whatCanDo": "Ce que ChatDB peut faire",
+      "canQueryDbs": "Interroger des bases de donnees",
+      "canExploreSchemas": "Explorer les schemas",
+      "canAnalyzeData": "Analyser les donnees",
+      "canWriteSql": "Ecrire du SQL",
+      "exampleQuestions": "Exemples de questions",
+      "example1": "Montre-moi le schema de ma base",
+      "example2": "Quels sont les 10 meilleurs produits par revenu ?",
+      "example3": "Trouve les utilisateurs inscrits la semaine derniere",
+      "shortcuts": "Raccourcis",
+      "shortcutSend": "Envoyer",
+      "shortcutNewLine": "Nouvelle ligne",
+      "shortcutStop": "Arreter",
+      "limitations": "Limitations",
+      "limitSelectOnly": "SELECT uniquement",
+      "limitMaxRows": "Maximum 500 lignes",
+      "limitNoDdl": "Pas de DDL (CREATE, ALTER, DROP)"
+    }
+  },
+  "settings": {
+    "stats": {
+      "activeProviders": "Fournisseurs actifs",
+      "configuredKeys": "Clés configurées",
+      "available": "Disponibles",
+      "pending": "En attente",
+      "activeConnections": "Connexions actives"
+    },
+    "tabs": {
+      "providers": "Fournisseurs IA",
+      "connections": "Connexions",
+      "prompts": "Prompts",
+      "general": "Général"
+    },
+    "providers": {
+      "title": "Fournisseurs IA",
+      "description": "Configurez vos clés API pour activer les différents fournisseurs d'intelligence artificielle.",
+      "noProviders": "Aucun fournisseur configuré.",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "apiKey": "Clé API",
+      "configured": "Configurée",
+      "notConfigured": "Non configurée",
+      "edit": "Modifier",
+      "save": "Enregistrer",
+      "saving": "Sauvegarde",
+      "saved": "Sauvegardé",
+      "cancel": "Annuler",
+      "enabled": "Fournisseur activé",
+      "disabled": "Fournisseur désactivé",
+      "keySaved": "Clé API enregistrée",
+      "keySaveFailed": "Échec de l'enregistrement",
+      "updateFailed": "Échec de la mise à jour"
+    },
+    "connections": {
+      "title": "Connexions base de données",
+      "description": "Gérez vos connexions PostgreSQL pour interroger vos données via le chat.",
+      "newConnection": "Nouvelle connexion",
+      "addConnection": "Ajouter une connexion",
+      "noConnections": "Aucune connexion configurée.",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "test": "Tester",
+      "edit": "Modifier",
+      "testOk": "Connexion OK",
+      "testResponds": "{name} répond correctement",
+      "testFailed": "Échec du test",
+      "testImpossible": "Connexion impossible",
+      "activated": "Connexion activée",
+      "deactivated": "Connexion désactivée",
+      "deleted": "Connexion supprimée",
+      "deleteFailed": "Échec de la suppression",
+      "deleteConfirm": "Supprimer la connexion \"{name}\" ?",
+      "updateFailed": "Échec de la mise à jour",
+      "form": {
+        "editTitle": "Modifier la connexion",
+        "newTitle": "Nouvelle connexion",
+        "editDescription": "Modifiez les paramètres de connexion.",
+        "newDescription": "Configurez une nouvelle connexion PostgreSQL.",
+        "name": "Nom",
+        "namePlaceholder": "Production DB",
+        "host": "Hôte",
+        "hostPlaceholder": "localhost",
+        "port": "Port",
+        "portPlaceholder": "5432",
+        "database": "Base de données",
+        "databasePlaceholder": "mydb",
+        "username": "Utilisateur",
+        "usernamePlaceholder": "postgres",
+        "password": "Mot de passe",
+        "passwordPlaceholder": "••••••",
+        "passwordUnchanged": "(inchangé)",
+        "ssl": "SSL",
+        "enableSsl": "Activer SSL",
+        "cancel": "Annuler",
+        "create": "Créer",
+        "save": "Enregistrer",
+        "created": "Connexion créée",
+        "updated": "Connexion mise à jour",
+        "createFailed": "Échec de la création",
+        "updateFailed": "Échec de la mise à jour"
+      }
+    },
+    "prompts": {
+      "title": "Prompts Système",
+      "description": "Personnalisez les prompts système utilisés par l'assistant et les agents.",
+      "categories": {
+        "general": "Général",
+        "agent": "Agents",
+        "routing": "Routage",
+        "context": "Contexte"
+      },
+      "promptCount": "{count} prompt{count, plural, one {} other {s}}",
+      "modifiedOn": "Modifié le {date}",
+      "contentLabel": "Contenu du prompt",
+      "contentPlaceholder": "Contenu du prompt...",
+      "charCount": "{count} / 10000 caractères",
+      "charValidation": "Le contenu doit contenir entre 50 et 10000 caractères.",
+      "reset": "Réinitialiser",
+      "cancel": "Annuler",
+      "save": "Enregistrer",
+      "resetConfirm": "Réinitialiser le prompt \"{name}\" à sa valeur par défaut ?",
+      "updated": "Prompt mis à jour",
+      "updateFailed": "Échec de la mise à jour",
+      "resetSuccess": "Prompt réinitialisé",
+      "resetFailed": "Échec de la réinitialisation"
+    },
+    "general": {
+      "title": "Paramètres généraux",
+      "description": "Personnalisez votre expérience utilisateur.",
+      "appearance": "Apparence",
+      "appearanceDescription": "Choisissez votre thème préféré",
+      "light": "Clair",
+      "dark": "Sombre",
+      "system": "Système",
+      "language": "Langue",
+      "languageDescription": "Langue de l'interface",
+      "comingSoon": "Bientôt disponible"
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "Page introuvable",
+      "back": "Retour à l'accueil"
+    },
+    "generic": {
+      "title": "Quelque chose s'est mal passé",
+      "retry": "Réessayer"
+    }
+  },
+  "common": {
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "send": "Envoyer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "error": "Erreur",
+    "unknownError": "Erreur inconnue"
+  }
+}

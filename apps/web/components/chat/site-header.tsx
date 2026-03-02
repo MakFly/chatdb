@@ -1,7 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import {
@@ -25,6 +26,7 @@ interface Connection {
 }
 
 export function SiteHeader() {
+  const t = useTranslations("chat.header");
   const pathname = usePathname();
   const router = useRouter();
   const {
@@ -136,7 +138,7 @@ export function SiteHeader() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="none" className="text-xs">
-                      Aucune connexion
+                      {t("noConnectionSelect")}
                     </SelectItem>
                     {connections.map((conn) => (
                       <SelectItem key={conn.id} value={conn.id} className="text-xs">
@@ -151,7 +153,7 @@ export function SiteHeader() {
                     <span className="inline-flex size-2 rounded-full bg-muted-foreground/40" />
                   </span>
                   <Database className="size-3" />
-                  <span>Offline</span>
+                  <span>{t("noConnection")}</span>
                 </div>
               )}
               {models.length > 0 && (

@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Sparkles, ChevronRight } from "lucide-react";
 import { MessageItem, AssistantThinkingItem } from "./message-item";
@@ -16,20 +17,21 @@ interface MessageListProps {
   connectionId?: string;
 }
 
-const DEFAULT_SUGGESTIONS = [
-  "Montre-moi le schéma de ma base",
-  "Quels sont les 10 meilleurs produits par revenu ?",
-  "Trouve les utilisateurs inscrits la semaine dernière",
-];
-
 export function MessageList({
   messages,
   isStreaming,
   status,
   onSuggestionClick,
-  suggestions = DEFAULT_SUGGESTIONS,
+  suggestions,
   connectionId,
 }: MessageListProps) {
+  const t = useTranslations("chat");
+  const DEFAULT_SUGGESTIONS = [
+    t("welcome.suggestion1"),
+    t("welcome.suggestion2"),
+    t("welcome.suggestion3"),
+  ];
+  const resolvedSuggestions = suggestions ?? DEFAULT_SUGGESTIONS;
   const viewportRef = React.useRef<HTMLDivElement>(null);
   const bottomRef = React.useRef<HTMLDivElement>(null);
   const [isAtBottom, setIsAtBottom] = React.useState(true);
@@ -96,15 +98,14 @@ export function MessageList({
           </div>
           <div className="space-y-2">
             <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-b from-foreground to-foreground/60 bg-clip-text text-transparent">
-              Comment puis-je vous aider ?
+              {t("welcome.title")}
             </h1>
             <p className="text-muted-foreground">
-              Interrogez vos bases de données, explorez les schémas, analysez
-              vos données.
+              {t("welcome.subtitle")}
             </p>
           </div>
           <div className="flex flex-col gap-2">
-            {suggestions.map((suggestion) => (
+            {resolvedSuggestions.map((suggestion) => (
               <button
                 key={suggestion}
                 onClick={() => onSuggestionClick?.(suggestion)}
@@ -159,8 +160,8 @@ export function MessageList({
           >
             <ArrowDown className="h-3.5 w-3.5" />
             {unreadCount > 0
-              ? `${unreadCount} nouveau${unreadCount > 1 ? "x" : ""} message${unreadCount > 1 ? "s" : ""}`
-              : "Défiler vers le bas"}
+              ? t("scroll.newMessages", { count: unreadCount })
+              : t("scroll.scrollDown")}
           </button>
         </div>
       )}

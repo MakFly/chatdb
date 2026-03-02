@@ -1,0 +1,413 @@
+{
+  "landing": {
+    "hero": {
+      "jpSubtitle": "データベース・アシスタント",
+      "title1": "データベースと",
+      "title2": "対話",
+      "title3": "しよう",
+      "taglinePrefix": "質問 →",
+      "taglineSql": "SQL",
+      "taglineSuffix": "→ 結果。",
+      "taglineInstant": "一瞬で。",
+      "subtitle": "オープンソース。セルフホスト。マルチDB。マルチLLM。",
+      "cta": "始める",
+      "github": "GitHub"
+    },
+    "navbar": {
+      "features": "機能",
+      "comparison": "比較",
+      "openSource": "オープンソース",
+      "login": "ログイン",
+      "github": "GitHub"
+    },
+    "features": {
+      "chapterLabel": "Chapter 01",
+      "title": "機能",
+      "nlToSql": {
+        "jpTitle": "言語 → SQL",
+        "subtitle": "自然言語 → SQL",
+        "description": "日本語で質問するだけで、最適化されたSQLクエリを取得できます。"
+      },
+      "multiLlm": {
+        "jpTitle": "マルチLLM",
+        "subtitle": "マルチLLM",
+        "description": "OpenAI、Anthropic、Ollama、Mistral — お好みのモデルを選択。"
+      },
+      "multiDb": {
+        "jpTitle": "マルチDB",
+        "subtitle": "マルチデータベース",
+        "description": "PostgreSQL、MySQL、SQLite、MariaDB — 統一インターフェース。"
+      },
+      "rbac": {
+        "jpTitle": "RBAC",
+        "subtitle": "アクセス制御",
+        "description": "誰がどのデータにアクセスできるかを細かく管理。"
+      },
+      "safeMutations": {
+        "jpTitle": "確認",
+        "subtitle": "安全な変更",
+        "description": "バリデーション付きでデータを安全に変更。"
+      },
+      "streaming": {
+        "jpTitle": "ストリーム",
+        "subtitle": "リアルタイムストリーミング",
+        "description": "生成されるレスポンスをリアルタイムで受信。"
+      },
+      "openSource": {
+        "jpTitle": "オープン",
+        "subtitle": "オープンソース",
+        "description": "自社インフラにデプロイ。データは手元に。"
+      },
+      "audit": {
+        "jpTitle": "監査",
+        "subtitle": "監査ログ",
+        "description": "実行されたすべてのクエリの完全なトレーサビリティ。"
+      }
+    },
+    "comparison": {
+      "chapterLabel": "Chapter 02",
+      "title": "なぜChatDB？",
+      "criteria": "基準",
+      "score": "スコア",
+      "openSource": "オープンソース",
+      "selfHosted": "セルフホスト",
+      "multiLlm": "マルチLLM",
+      "multiDb": "マルチDB",
+      "rbac": "RBAC",
+      "dataPrivacy": "データプライバシー",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "howItWorks": {
+      "chapterLabel": "Chapter 03",
+      "title": "使い方",
+      "step1": {
+        "jpTitle": "登録",
+        "subtitle": "アカウント作成",
+        "description": "数秒で無料登録。"
+      },
+      "step2": {
+        "jpTitle": "接続",
+        "subtitle": "データベースを接続",
+        "description": "PostgreSQL、MySQL、SQLite、MariaDB — 接続を追加。"
+      },
+      "step3": {
+        "jpTitle": "質問",
+        "subtitle": "質問する",
+        "description": "AIがリアルタイムでクエリを翻訳・実行。"
+      }
+    },
+    "openSourceSection": {
+      "title1": "",
+      "title2": "オープンソース",
+      "jpSubtitle": "オープンソース — 自由ソフトウェア",
+      "description": "ChatDBはMITライセンスの100%オープンソースです。",
+      "cta": "ソースコードを見る"
+    },
+    "cta": {
+      "chapterLabel": "最終章 — Final Chapter",
+      "title1": "データを",
+      "title2": "クエリ",
+      "title3": "する準備は",
+      "title4": "？",
+      "description": "ChatDBを数分でデプロイ。",
+      "jpReady": "準備はいい？",
+      "start": "始める",
+      "documentation": "ドキュメント"
+    },
+    "footer": {
+      "description": "自然言語でデータベースをクエリ。",
+      "jpDescription": "データベース・アシスタント",
+      "product": "プロダクト",
+      "features": "機能",
+      "comparison": "比較",
+      "openSource": "オープンソース",
+      "community": "コミュニティ",
+      "documentation": "ドキュメント",
+      "contact": "お問い合わせ",
+      "copyright": "© 2026 ChatDB — MIT License",
+      "builtWith": "Built with",
+      "and": "and"
+    },
+    "stack": {
+      "title": "互換性 — 互換性",
+      "databases": "Databases",
+      "llmProviders": "LLM Providers"
+    }
+  },
+  "auth": {
+    "branding": {
+      "tagline": "自然言語でデータベースをクエリ。",
+      "features": {
+        "sqlNatural": "自然なSQLでデータをクエリ",
+        "connectDbs": "PostgreSQL、MySQL、SQLiteを接続",
+        "history": "クエリの履歴と共有",
+        "security": "セキュリティとプライバシーを保証"
+      },
+      "copyright": "© {year} ChatDB. All rights reserved."
+    },
+    "social": {
+      "google": "Googleで続行",
+      "github": "GitHubで続行",
+      "comingSoon": "近日公開"
+    },
+    "or": "または",
+    "login": {
+      "title": "ログイン",
+      "subtitle": "ChatDBワークスペースにアクセス",
+      "email": "メールアドレス",
+      "emailPlaceholder": "you@example.com",
+      "password": "パスワード",
+      "forgotPassword": "パスワードを忘れた？",
+      "submit": "ログイン",
+      "noAccount": "アカウントをお持ちでない方",
+      "register": "新規登録",
+      "invalidCredentials": "認証情報が無効です",
+      "genericError": "エラーが発生しました"
+    },
+    "register": {
+      "title": "アカウント作成",
+      "subtitle": "データのクエリを始めましょう",
+      "name": "名前",
+      "namePlaceholder": "お名前",
+      "email": "メールアドレス",
+      "emailPlaceholder": "you@example.com",
+      "password": "パスワード",
+      "passwordPlaceholder": "8文字以上",
+      "submit": "アカウントを作成",
+      "hasAccount": "すでにアカウントをお持ちの方",
+      "login": "ログイン",
+      "registrationFailed": "登録に失敗しました",
+      "genericError": "エラーが発生しました"
+    }
+  },
+  "chat": {
+    "sidebar": {
+      "aiAssistant": "AIアシスタント",
+      "newChat": "新しいチャット",
+      "searchPlaceholder": "会話を検索...",
+      "chats": "チャット",
+      "noResults": "結果が見つかりません",
+      "bookmarks": "ブックマーク",
+      "archive": "アーカイブ",
+      "folders": "フォルダ",
+      "removeBookmark": "ブックマークを削除",
+      "bookmark": "ブックマーク",
+      "unarchive": "アーカイブ解除",
+      "delete": "削除",
+      "docsMemory": "メモリドキュメント",
+      "guideEmbeddings": "エンベディングガイド",
+      "settings": "設定",
+      "accountSettings": "アカウント設定",
+      "signOut": "ログアウト",
+      "dateToday": "今日",
+      "dateYesterday": "昨日",
+      "dateLast7Days": "過去7日間",
+      "dateLast30Days": "過去30日間",
+      "dateOlder": "それ以前"
+    },
+    "header": {
+      "noConnection": "オフライン",
+      "noConnectionSelect": "接続なし"
+    },
+    "welcome": {
+      "title": "何をお手伝いしましょうか？",
+      "subtitle": "データベースのクエリ、スキーマの探索、データの分析ができます。",
+      "suggestion1": "データベースのスキーマを見せて",
+      "suggestion2": "売上トップ10の商品は？",
+      "suggestion3": "先週登録したユーザーを見つけて"
+    },
+    "scroll": {
+      "newMessages": "{count}件の新しいメッセージ",
+      "scrollDown": "下にスクロール"
+    },
+    "composer": {
+      "placeholder": "メッセージを送信...",
+      "send": "送信",
+      "stop": "生成を停止",
+      "messageInput": "メッセージ入力",
+      "writeOptions": "書き込みモードオプション",
+      "mutationCancelled": "ミューテーションがキャンセルされました",
+      "rowsAffected": "{count}行が影響を受けました",
+      "updateEnabled": "UPDATEモード有効 — ミューテーションは確認が必要です",
+      "updateDisabled": "UPDATEモード無効",
+      "deleteEnabled": "DELETEモード有効 — 削除は確認が必要です",
+      "deleteDisabled": "DELETEモード無効",
+      "schemaEnabled": "DBスキーマトリガー有効 — 次のメッセージでスキーマを表示",
+      "schemaDisabled": "DBスキーマトリガー無効",
+      "explainEnabled": "Explainトリガー有効 — 次のメッセージでクエリを説明",
+      "explainDisabled": "Explainトリガー無効",
+      "schemaDb": "DBスキーマ",
+      "explain": "Explain"
+    },
+    "quickPrompts": {
+      "showSchema": "スキーマを表示",
+      "showSchemaInput": "データベースのスキーマを見せて",
+      "explainQuery": "このクエリを説明",
+      "explainQueryInput": "このクエリの仕組みを説明して",
+      "analyzeDb": "このDBを分析",
+      "analyzeDbInput": "このデータベースの構造とパフォーマンスを分析して",
+      "mutationStats": "ミューテーション統計"
+    },
+    "help": {
+      "title": "ChatDBヘルプ",
+      "whatCanDo": "ChatDBでできること",
+      "canQueryDbs": "データベースのクエリ",
+      "canExploreSchemas": "スキーマの探索",
+      "canAnalyzeData": "データの分析",
+      "canWriteSql": "SQLの記述",
+      "exampleQuestions": "質問の例",
+      "example1": "データベースのスキーマを見せて",
+      "example2": "売上トップ10の商品は？",
+      "example3": "先週登録したユーザーを見つけて",
+      "shortcuts": "ショートカット",
+      "shortcutSend": "送信",
+      "shortcutNewLine": "改行",
+      "shortcutStop": "停止",
+      "limitations": "制限事項",
+      "limitSelectOnly": "SELECTのみ",
+      "limitMaxRows": "最大500行",
+      "limitNoDdl": "DDL非対応（CREATE、ALTER、DROP）"
+    }
+  },
+  "settings": {
+    "stats": {
+      "activeProviders": "アクティブプロバイダー",
+      "configuredKeys": "設定済みキー",
+      "available": "利用可能",
+      "pending": "保留中",
+      "activeConnections": "アクティブ接続"
+    },
+    "tabs": {
+      "providers": "AIプロバイダー",
+      "connections": "接続",
+      "prompts": "プロンプト",
+      "general": "一般"
+    },
+    "providers": {
+      "title": "AIプロバイダー",
+      "description": "APIキーを設定して各AIプロバイダーを有効にします。",
+      "noProviders": "プロバイダーが設定されていません。",
+      "active": "アクティブ",
+      "inactive": "非アクティブ",
+      "apiKey": "APIキー",
+      "configured": "設定済み",
+      "notConfigured": "未設定",
+      "edit": "編集",
+      "save": "保存",
+      "saving": "保存中",
+      "saved": "保存済み",
+      "cancel": "キャンセル",
+      "enabled": "プロバイダーを有効化",
+      "disabled": "プロバイダーを無効化",
+      "keySaved": "APIキーを保存しました",
+      "keySaveFailed": "保存に失敗しました",
+      "updateFailed": "更新に失敗しました"
+    },
+    "connections": {
+      "title": "データベース接続",
+      "description": "チャットでデータをクエリするためのPostgreSQL接続を管理します。",
+      "newConnection": "新しい接続",
+      "addConnection": "接続を追加",
+      "noConnections": "接続が設定されていません。",
+      "active": "アクティブ",
+      "inactive": "非アクティブ",
+      "test": "テスト",
+      "edit": "編集",
+      "testOk": "接続OK",
+      "testResponds": "{name}が正常に応答しています",
+      "testFailed": "テスト失敗",
+      "testImpossible": "接続に失敗しました",
+      "activated": "接続を有効化",
+      "deactivated": "接続を無効化",
+      "deleted": "接続を削除しました",
+      "deleteFailed": "削除に失敗しました",
+      "deleteConfirm": "接続「{name}」を削除しますか？",
+      "updateFailed": "更新に失敗しました",
+      "form": {
+        "editTitle": "接続を編集",
+        "newTitle": "新しい接続",
+        "editDescription": "接続設定を編集します。",
+        "newDescription": "新しいPostgreSQL接続を設定します。",
+        "name": "名前",
+        "namePlaceholder": "本番DB",
+        "host": "ホスト",
+        "hostPlaceholder": "localhost",
+        "port": "ポート",
+        "portPlaceholder": "5432",
+        "database": "データベース",
+        "databasePlaceholder": "mydb",
+        "username": "ユーザー名",
+        "usernamePlaceholder": "postgres",
+        "password": "パスワード",
+        "passwordPlaceholder": "••••••",
+        "passwordUnchanged": "（変更なし）",
+        "ssl": "SSL",
+        "enableSsl": "SSLを有効にする",
+        "cancel": "キャンセル",
+        "create": "作成",
+        "save": "保存",
+        "created": "接続を作成しました",
+        "updated": "接続を更新しました",
+        "createFailed": "作成に失敗しました",
+        "updateFailed": "更新に失敗しました"
+      }
+    },
+    "prompts": {
+      "title": "システムプロンプト",
+      "description": "アシスタントとエージェントが使用するシステムプロンプトをカスタマイズします。",
+      "categories": {
+        "general": "一般",
+        "agent": "エージェント",
+        "routing": "ルーティング",
+        "context": "コンテキスト"
+      },
+      "promptCount": "{count}個のプロンプト",
+      "modifiedOn": "{date}に変更",
+      "contentLabel": "プロンプト内容",
+      "contentPlaceholder": "プロンプト内容...",
+      "charCount": "{count} / 10000文字",
+      "charValidation": "内容は50〜10000文字である必要があります。",
+      "reset": "リセット",
+      "cancel": "キャンセル",
+      "save": "保存",
+      "resetConfirm": "プロンプト「{name}」をデフォルトにリセットしますか？",
+      "updated": "プロンプトを更新しました",
+      "updateFailed": "更新に失敗しました",
+      "resetSuccess": "プロンプトをリセットしました",
+      "resetFailed": "リセットに失敗しました"
+    },
+    "general": {
+      "title": "一般設定",
+      "description": "ユーザー体験をカスタマイズします。",
+      "appearance": "外観",
+      "appearanceDescription": "お好みのテーマを選択",
+      "light": "ライト",
+      "dark": "ダーク",
+      "system": "システム",
+      "language": "言語",
+      "languageDescription": "インターフェース言語",
+      "comingSoon": "近日公開"
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "ページが見つかりません",
+      "back": "ホームに戻る"
+    },
+    "generic": {
+      "title": "エラーが発生しました",
+      "retry": "再試行"
+    }
+  },
+  "common": {
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "send": "送信",
+    "save": "保存",
+    "delete": "削除",
+    "edit": "編集",
+    "error": "エラー",
+    "unknownError": "不明なエラー"
+  }
+}

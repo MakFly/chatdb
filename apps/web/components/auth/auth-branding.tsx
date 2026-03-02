@@ -1,13 +1,12 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Bot, Check } from "lucide-react";
 
-const features = [
-  "Interrogez vos données en SQL naturel",
-  "Connectez PostgreSQL, MySQL, SQLite",
-  "Historique et partage de vos requêtes",
-  "Sécurité et confidentialité garanties",
-];
+const featureKeys = ["sqlNatural", "connectDbs", "history", "security"] as const;
 
 function AuthBranding() {
+  const t = useTranslations("auth.branding");
   return (
     <div className="hidden lg:flex flex-col justify-between h-full bg-gradient-to-br from-primary/20 via-primary/10 to-background p-10">
       <div className="flex items-center gap-2">
@@ -19,23 +18,23 @@ function AuthBranding() {
 
       <div className="space-y-6">
         <blockquote className="text-2xl font-semibold leading-snug">
-          &ldquo;Interrogez vos bases de données en langage naturel.&rdquo;
+          &ldquo;{t("tagline")}&rdquo;
         </blockquote>
 
         <ul className="space-y-3">
-          {features.map((feature) => (
-            <li key={feature} className="flex items-center gap-3 text-sm">
+          {featureKeys.map((key) => (
+            <li key={key} className="flex items-center gap-3 text-sm">
               <div className="flex size-5 items-center justify-center rounded-full bg-primary/20">
                 <Check className="size-3 text-primary" />
               </div>
-              {feature}
+              {t(`features.${key}`)}
             </li>
           ))}
         </ul>
       </div>
 
       <p className="text-xs text-muted-foreground">
-        &copy; {new Date().getFullYear()} ChatDB. Tous droits réservés.
+        {t("copyright", { year: new Date().getFullYear() })}
       </p>
     </div>
   );

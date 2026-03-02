@@ -37,6 +37,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Manga custom colors */
+  --manga-pink: oklch(0.75 0.25 350);
+  --manga-yellow: oklch(0.9 0.18 90);
+  --manga-cyan: oklch(0.78 0.15 220);
+  --manga-red: oklch(0.6 0.3 25);
+  --manga-purple: oklch(0.5 0.25 300);
 }
 
 .dark {
@@ -72,6 +79,13 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+
+  /* Manga custom colors (dark) */
+  --manga-pink: oklch(0.75 0.25 350);
+  --manga-yellow: oklch(0.9 0.18 90);
+  --manga-cyan: oklch(0.78 0.15 220);
+  --manga-red: oklch(0.6 0.3 25);
+  --manga-purple: oklch(0.5 0.25 300);
 }
 
 @theme inline {
@@ -113,6 +127,12 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-manga-pink: var(--manga-pink);
+  --color-manga-yellow: var(--manga-yellow);
+  --color-manga-cyan: var(--manga-cyan);
+  --color-manga-red: var(--manga-red);
+  --color-manga-purple: var(--manga-purple);
 }
 
 @layer base {
@@ -219,4 +239,113 @@
   border-radius: 50%;
   background-color: currentColor;
   animation: thinking-dot 1.2s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════════════
+   MANGA RETRO EFFECTS (Landing Page)
+   ═══════════════════════════════════════════ */
+
+.manga-halftone {
+  position: relative;
+}
+.manga-halftone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--manga-pink) 0.5px, transparent 0.5px);
+  background-size: 8px 8px;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.manga-speedlines {
+  position: relative;
+  overflow: hidden;
+}
+.manga-speedlines::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: repeating-conic-gradient(
+    transparent 0deg 1.5deg,
+    var(--manga-pink) 1.5deg 1.8deg,
+    transparent 1.8deg 4deg
+  );
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.manga-hlines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    var(--manga-pink) 3px,
+    var(--manga-pink) 3.5px,
+    transparent 3.5px,
+    transparent 18px
+  );
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.manga-panel {
+  border: 3px solid var(--foreground);
+  box-shadow:
+    6px 6px 0px var(--manga-pink),
+    -2px -2px 0px var(--manga-cyan);
+  position: relative;
+}
+
+.manga-screentone {
+  position: relative;
+}
+.manga-screentone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(45deg, var(--manga-purple) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--manga-purple) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--manga-purple) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--manga-purple) 75%);
+  background-size: 4px 4px;
+  background-position: 0 0, 0 2px, 2px -2px, -2px 0;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.manga-impact {
+  text-shadow:
+    3px 3px 0px var(--manga-pink),
+    -1px -1px 0px var(--manga-cyan);
+}
+
+.manga-glow {
+  text-shadow:
+    0 0 10px var(--manga-pink),
+    0 0 30px var(--manga-pink),
+    0 0 60px color-mix(in oklch, var(--manga-pink), transparent 50%);
+}
+
+.manga-jagged-top {
+  clip-path: polygon(
+    0% 8%, 3% 0%, 6% 6%, 9% 1%, 12% 7%, 15% 0%, 18% 5%, 21% 1%, 24% 8%, 27% 0%, 30% 6%, 33% 2%, 36% 7%, 39% 0%, 42% 5%, 45% 1%, 48% 8%, 51% 0%, 54% 6%, 57% 1%, 60% 7%, 63% 0%, 66% 5%, 69% 2%, 72% 8%, 75% 0%, 78% 6%, 81% 1%, 84% 7%, 87% 0%, 90% 5%, 93% 2%, 96% 7%, 100% 0%, 100% 100%, 0% 100%
+  );
+}
+
+@keyframes manga-flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-manga-flash {
+  animation: manga-flash 2s ease-in-out infinite;
 }
